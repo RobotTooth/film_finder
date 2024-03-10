@@ -30,6 +30,9 @@ const getMovies = async () => {
     if (response.ok) {
       const jsonResponse = await response.json();
       // console.log(jsonResponse);
+      const movies = jsonResponse.results;
+      // console.log(movies);
+      return movies;
     }
   } catch (error) {
     console.log(error);
@@ -38,7 +41,9 @@ const getMovies = async () => {
 
 // getMovies();
 
-const getMovieInfo = () => {};
+const getMovieInfo = (movie) => {
+  const movieID = movie.id;
+};
 
 // Gets a list of movies and ultimately displays the info of a random movie from the list
 const showRandomMovie = () => {
